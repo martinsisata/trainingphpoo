@@ -46,7 +46,7 @@ public static function open ($nome)
   				break;
   			case 'mysql':
   				$port = $port ? $port : '3306';
-  				$conn = new PDO('mysql:host=localhost;dbname=livro','root','12345678');
+  				$conn = new PDO('mysql:host=localhost;dbname=escolatecnica','root','12345678');
   				break;
   			case 'sqlite':
   				$conn = new PDO("sqlite:{$name}");
