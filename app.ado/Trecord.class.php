@@ -39,7 +39,7 @@ abstract class TRecord
 	Executado sempre que uma propriedade for atribuida.
 	*/
 
-	private function __set($prop, $value)
+	public function __set($prop, $value)
 	{
 		//Verifica se existe método set <propriedade>
 		if (method_exists($this, 'set_'.$prop))
