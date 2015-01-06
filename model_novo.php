@@ -5,7 +5,8 @@ function __autoload($classe)
 {
 	if(file_exists("app.ado/{$classe}.class.php"))
 	{
-		include_once "app.ado/{$classe}.class.php";
+		require "app.ado/{$classe}.class.php";
+
 	}
 }
 
