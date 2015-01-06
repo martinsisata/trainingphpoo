@@ -47,6 +47,7 @@ configurando polimorfismo
 */
 
 abstract function getInstruction();
+
 }
 
 ?>

@@ -117,7 +117,7 @@ abstract class TRecord
 			$this->id = $this->getLast() +1;
 			//Criar uma Instrução de insert
 			$sql = new TSqlInsert;
-			$sql = setEntity($this->getEntity());
+			$sql -> setEntity($this->getEntity());
 			//Percorre os dados do objceto
 			foreach ($this->data as $key => $value)
 			{
@@ -149,7 +149,7 @@ abstract class TRecord
 		{
 			//Faz o log e executa o SQL
 			TTransaction::log($sql->getInstruction());
-			$result = $conn ->exec($sql->getInstruction);
+			$result = $conn ->exec($sql->getInstruction());
 			//Retorna o Resultado
 			return $result;
 
