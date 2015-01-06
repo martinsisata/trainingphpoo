@@ -18,6 +18,7 @@ final class TConnection
 	
 public static function open ($nome)
  	{
+      /*
  		//Verifica se existe aquivo de configuração para este Banco de dado
  		if (file_exists("app.config/{$nome}.ini")) 
  		{
@@ -30,7 +31,7 @@ public static function open ($nome)
  			throw new Exception ("Arquivo '$nome' não encontrado");
  		}
  		//Lê as informações contidas no arquivo
- 		$user = isset($db ['user']) ? $db ['user'] : NULL;
+ 	$user = isset($db ['user']) ? $db ['user'] : NULL;
  		$pass = isset($db ['pass']) ? $db ['pass'] : NULL;
  		$name = isset($db ['name']) ? $db ['name'] : NULL;
  		$host = isset($db ['host']) ? $db ['host'] : NULL;
@@ -67,8 +68,29 @@ public static function open ($nome)
 
   		//Definir para que o PDO lança exceções na acorrencia de erros
   		$conn -> setAttribute (PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+*/
+      //Definir as constantes
+      define('HOST','localhost');
+      define('DB_NAME','my_livro');
+      define('USER','root');
+      define('PASS','12345678');
 
-  		//resornar o Objecto instanciadso
+      $dsn = 'mysql:host='.HOST.';dbname='.DB_NAME;
+
+      try 
+      {
+
+          $conn = new PDO ($dsn,USER,PASS);
+          $conn -> setAttribute (PDO::ATTR_ERRMODE,PDO :: ERRMODE_EXCEPTION);
+
+      } 
+      catch 
+      (PDOException $e) 
+      {
+          echo '<b>Houve erro com a conexao do banco de dado</b><br><br>'.$e->getMessage().'<br><br>';
+  
+}
+  		//retornar o Objecto instanciadso
   		return $conn;
 
 

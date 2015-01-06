@@ -57,7 +57,7 @@ try
 
 {
 	//Exiba a mesagem gerada pela exceção
-	echo '<b>Erro</b>' . $e->getMessage();
+	echo '<br><br><b>Erro</b><br><br>' . $e->getMessage();
 	//Desfazer todas alterações no banco de dados
 	TTransaction::rollback();
 	

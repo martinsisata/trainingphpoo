@@ -24,13 +24,13 @@ final class TSqlSelect extends TSqlInstruction
 	public function getInstruction()
 	{
 		//Montar a instrução SQl
-		$this -> sql = 'SELECT';
+		$this -> sql = ' SELECT ';
 
 		//Monta a string com os nomes das colunas
 		$this -> sql .= implode(',', $this -> columns);
 
 		//Adicionar na Cláusula FROM o nome da tabela
-		$this -> sql .= 'FROM' . $this -> entity;
+		$this -> sql .= ' FROM ' . $this -> entity;
 
 		// Obter a Cláusula WHERE do Objecto Criteria
 		if ($this -> criteria) 
@@ -38,25 +38,25 @@ final class TSqlSelect extends TSqlInstruction
 			$expression = $this -> criteria -> dump();
 			if ($expression) 
 			{
-				$this -> sql .= 'WHERE' . $expression;
+				$this -> sql .= ' WHERE ' . $expression;
 			}
 			//Obter as propriedades do criterio
-			$order = $this -> criteria -> getProperty('order');
-			$limit = $this -> criteria -> getProperty('limit');
-			$offset = $this -> criteria -> getProperty('offset');
+			$order  = $this -> criteria -> getProperty(' order ');
+			$limit  = $this -> criteria -> getProperty(' limit ');
+			$offset = $this -> criteria -> getProperty(' offset ');
 
 			//Obter ordenação do select
 			if ($order) 
 			{
-				$this -> sql .= 'ORDER BY' . $order;
+				$this -> sql .= ' ORDER BY ' . $order;
 			}
 			if ($limit) 
 			{
-				$this -> sql .= 'LIMIT' . $limit;
+				$this -> sql .= ' LIMIT ' . $limit;
 			}
 			if ($offset) 
 			{
-				$this -> sql .= 'OFFSER' . $offset;
+				$this -> sql .= ' OFFSER ' . $offset;
 			}
 		}
 		return $this -> sql;

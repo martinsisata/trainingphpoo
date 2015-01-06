@@ -10,6 +10,7 @@ final class TSqlInsert extends TSqlInstruction
 	Método setRowData()
 	Atribui valor a determinadas colunas no banco de dados que serão inseridas
 	*/
+	
 	public function setRowData ($column,$value)
 	{
 		//Verifica se um dado escalar (String, intiger,....)

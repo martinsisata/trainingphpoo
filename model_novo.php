@@ -33,7 +33,7 @@ class CursoRecord extends TRecord
 try 
 {
 	//Iniciar a transação com a base de dados 'pg_livro'
-	TTransaction::open('pg_livro');
+	TTransaction::open('my_livro');
 	//Definir o arquiva para log
 	TTransaction::setLogger(new TLoggerTXT('/tmp/log1.txt'));
 
