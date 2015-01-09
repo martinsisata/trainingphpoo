@@ -1,0 +1,8 @@
+<p>
+ <b>2014-01-07 19:42:31</b>:
+ <i>Inserindo Registo Martins Isata</i>
+</p>
+<p>
+ <b>2014-01-07 19:42:31</b>:
+ <i>INSERT INTO  famosos ( codigo , nome )values(	NULL,'Martins Isata')</i>
+</p>

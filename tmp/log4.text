@@ -1,0 +1,6 @@
+2015-01-08 10:39:47 :: **Persistindo o Aluno $martins
+2015-01-08 10:39:47 ::  SELECT max(ID) as ID FROM aluno
+2015-01-08 10:39:47 :: INSERT INTO aluno(nome,endereco,telefone,cidade,id)values('Martins Isata','Rua A','(925) 584-253','Luanda',	NULL)
+2015-01-08 10:39:47 :: **Persistir o aluno $nerilia
+2015-01-08 10:39:47 ::  SELECT max(ID) as ID FROM aluno
+2015-01-08 10:39:47 :: INSERT INTO aluno(nome,endereco,telefone,cidade,id)values('Nerilia Tavares','Rua A','(921) 701-479','Luanda',	NULL)

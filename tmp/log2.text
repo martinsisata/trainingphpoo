@@ -1,0 +1,4 @@
+2015-01-08 17:00:09 ::  SELECT * FROM aluno WHERE (id=1)
+2015-01-08 17:00:09 ::  SELECT * FROM aluno WHERE (id=2)
+2015-01-08 17:00:09 ::  SELECT * FROM curso WHERE (id=1)
+2015-01-08 17:00:09 ::  SELECT * FROM curso WHERE (id=2)
