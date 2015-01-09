@@ -6,7 +6,7 @@ include_once 'autoLoad.php';
 * para manipular os resgistros das tabelas correspondentes
 */
 class AlunoRecord     extends TRecord {}
-class TurmaRecor      extends TRecord {}
+class TurmaRecord      extends TRecord {}
 class InscricaoRecord extends TRecord {}
 
 //Obtém objectos do banco de dados
@@ -82,7 +82,7 @@ try
 	}
 
 	//Finaliza a transação
-	TTransaction::clase();
+	TTransaction::close();
 
 } catch (Exception $e) //em caso de Exceção
 {
