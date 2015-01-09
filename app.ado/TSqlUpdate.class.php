@@ -60,11 +60,11 @@ final class TSqlUpdate extends TSqlInstruction
 				$set [] = "{$column} = {$value}";
 			}
 		}
-		$this -> sql .='SET' . implode(',', $set);
+		$this -> sql .=' SET ' . implode(',', $set);
 		//retorna a Cláusula WHERE do Objecto $this -> criteria
 		if ($this -> criteria) 
 		{
-			$this -> sql .= 'WHERE' . $this -> criteria -> dump();
+			$this -> sql .= ' WHERE ' . $this -> criteria -> dump();
 		}
 		return $this -> sql;
 	}

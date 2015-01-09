@@ -17,7 +17,7 @@ final class TSqlDelete extends TSqlInstruction
 		$expression = $this -> criteria -> dump();
 		if ($expression) 
 		{
-			$this -> sql .= 'WHERE' . $expression; 
+			$this -> sql .= ' WHERE ' . $expression; 
 		}
 	}
 	return $this -> sql;

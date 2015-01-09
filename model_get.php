@@ -25,7 +25,7 @@ try
 	//Inicia a tranasação com o banco 'my_livro'
 	TTransaction::open('my_livro');
 	//define o arquivo para log
-	TTransaction::setLogger (new TloggerTXT('/tmp/log2.text'));
+	TTransaction::setLogger (new TloggerTXT('C:\Apache24\htdocs\trainingphpoo\tmp\log2.text'));
 
 	//Exibe algumas mensagens na tela
 	echo "Ontendo alunos<br>\n";
@@ -48,6 +48,8 @@ try
 
 	//Obtém curso de ID 1
 	$curso = new CursoRecord(1);
+	echo 'Curso  : ' .$curso->descricao  . "<br>\n";
+	$curso = new CursoRecord(2);
 	echo 'Curso  : ' .$curso->descricao  . "<br>\n";
 
 	//Finaliza a transação

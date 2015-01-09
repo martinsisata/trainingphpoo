@@ -36,7 +36,7 @@ try
 	TTransaction::log($sql -> getInstruction());
 
 	//Definir a Etrstegia de LOG
-	TTransaction::setLogger(new TLoggerXML('C:\Apache24\htdocs\programandoComOO\tmp\arquivo.xml'));
+	TTransaction::setLogger(new TLoggerXML('C:\Apache24\htdocs\trainingphpoo\tmp\Martins.xml'));
 
 	//Escreve a Mensagem de LOG
 	TTransaction::log("Inserindo Registo de Nerilia Tavares");
@@ -53,6 +53,7 @@ try
 
 	//fecha a Transação aplicado todas as operações
 	TTransaction::close();
+	echo "Log Criado";
 }
 catch (Exception $e) 
 {

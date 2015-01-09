@@ -11,6 +11,7 @@ function __autoload($classe)
 }
 
 
+
 /*
 Classe AlunoRecord, filha de TRecord
 */
@@ -36,7 +37,7 @@ try
 	//Iniciar a transação com a base de dados 'pg_livro'
 	TTransaction::open('my_livro');
 	//Definir o arquiva para log
-	TTransaction::setLogger(new TLoggerTXT('/tmp/log1.txt'));
+	TTransaction::setLogger(new TLoggerTXT('C:\Apache24\htdocs\trainingphpoo\tmp\log1.txt'));
 
 	//armazena esta frase no arquivo de LOG
 	TTransaction::log("** Inserido Aluuno");
