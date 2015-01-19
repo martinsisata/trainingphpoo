@@ -1,0 +1,7 @@
+2015-01-19 12:46:59 :: **Excluir Turmas da tarde
+2015-01-19 12:46:59 ::  SELECT  *  FROM turma WHERE (turno='T')
+2015-01-19 12:46:59 :: DELETE FROM turma WHERE (id='2')
+2015-01-19 12:46:59 :: DELETE FROM turma WHERE (id='4')
+2015-01-19 12:46:59 :: DELETE FROM turma WHERE (id='6')
+2015-01-19 12:46:59 :: **Excluir as inscrições do aluno '1'
+2015-01-19 12:46:59 :: DELETE FROM inscricao WHERE (refAluno='1')

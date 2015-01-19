@@ -5,46 +5,63 @@ include_once 'autoLoad.php';
 * Cria as classes Active Record
 * para manipular os resgistros das tabelas correspondentes
 */
+class Turmarecord     extends Trecord {}
 class InscricaoRecord extends Trecord {}
 
-//Obtém objectosk da base de dados
+//Delete objectos do banco de dados
 try 
 {
 	//Iniscia transação com o banco 'my_livro'
 	TTransaction::open('my_livro');
 	//Define o arquivo para log
-	TTransaction::setLogger(new TLoggerTXT('C:\Apache24\htdocs\trainingphpoo\tmp\log7.txt'));
-	TTransaction::log("**Selecriona Inscrições da Turma 2");
+	TTransaction::setLogger(new TLoggerTXT('C:\Apache24\htdocs\trainingphpoo\tmp\log9.txt'));
 
-	//Instacia critério de seleção
+	######################################################
+	# Primeiro exemplo, Excluir todas as Turmas da tarde #
+	######################################################
+	TTransaction::log("**Excluir Turmas da tarde");
+
+
+	//Iniciar um critério de seleção turma = 'T'
 	$criteria = new TCriteria;
-	$criteria->add(new TFilter(' refTurma ',  ' = ',  2));
-	$criteria->add(new TFilter(' cancelado ', ' = ',  FALSE));
+	$criteria->add(new TFilter('turno', '=' , 'T'));
 
-	//Instancia repositório de inscrição
-	$repository = new TRepository('inscricao');
-	//retornar todos os objectos que satifazem o critério
-	$inscricoes = $repository->load($criteria);
+	//Instanciar repositório de turmas
+	$repository= new TRepository('turma');
 
-	//Verifica se retornou alguma inscrição
-	if ($inscricoes) 
+	//Retornar todos objectos que satisfazem o critério
+	$turmas = $repository ->load($criteria);
+
+	//verificar se retornou alguma turma
+
+	if ($turmas) 
 	{
-		TTransaction::log("**Altera as inscrições");
-		//Percorre todas inscriç~eos retornadas
+		//Percorre todas Turmas retornadas
 
-		foreach ($inscricoes as $inscricao) 
+		foreach ($turmas as $turma) 
 		{
-			//alterar algumas propriedades
-			$inscricao->nota       = 8;
-			$inscricao->frequencia = 75;
-
-			//Armazena o objecto na base de dados
-			$inscricao->store();
+			//Excluir a turma
+			$turma->delete();
 		}
 	}
+
+	######################################################
+	# Segundo exemplo, Excluir as inscrições do aluno "1"#
+	######################################################
+	TTransaction::log("**Excluir as inscrições do aluno '1'");
+	//Instanciar criterio de seleção de dados ref_Aluno='1'
+	$criteria = new TCriteria;
+	$criteria-> add(new TFilter('refAluno', '=', '1'));
+
+	//Instancia um repositorio de inscricao
+	$repository = new TRepository('inscricao');
+
+	//Excluir todos os objectos que satisfazem este criterio de seleção
+	$repository->delete($criteria);
+
 	//Finaliza a transação
 	TTransaction::close();
-	echo "Alterações Concluida com sucesso";
+	echo "Foram excluidos os dados com sucesso";
 } 
 catch (Exception $e) //em caso de exceção
 {
