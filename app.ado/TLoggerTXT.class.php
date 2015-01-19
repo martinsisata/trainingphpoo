@@ -2,6 +2,7 @@
 /*Classe TLoggerTXT
 implementa o Algoritmo de LOG em HTML
 */
+
 class TLoggerTXT extends TLogger 
 {
 	/*

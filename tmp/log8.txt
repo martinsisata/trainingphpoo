@@ -1,0 +1,4 @@
+2015-01-19 12:14:26 :: **Conta Alunos de Luanda
+2015-01-19 12:14:26 ::  SELECT  count(*)  FROM aluno WHERE (cidade = 'Luanda')
+2015-01-19 12:14:26 :: **Conta Turmas
+2015-01-19 12:14:26 ::  SELECT  count(*)  FROM turma WHERE ((sala  = ' 100 '  AND  turno  = ' T ')  OR (sala  = ' 200 '  AND  turno  = ' M '))

@@ -19,9 +19,9 @@
 		cancelado boolean,
 		concluida boolean
 		);
-		insert into inscricao (refAluno,refTurma,nota,frequencia, cancelado, concluida) values(1,1,9,80,1,1);
-		insert into inscricao (refAluno,refTurma,nota,frequencia, cancelado, concluida) values(2,3,7,75,1,0);
-		insert into inscricao (refAluno,refTurma,nota,frequencia, cancelado, concluida) values(3,4,6,60,1,1);
+		insert into inscricao (refAluno,refTurma,nota,frequencia, cancelado, concluida) values(3,2,8,75,0,1);
+		insert into inscricao (refAluno,refTurma,nota,frequencia, cancelado, concluida) values(2,3,9,80,0,0);
+		insert into inscricao (refAluno,refTurma,nota,frequencia, cancelado, concluida) values(3,4,7,75,0,1);
 		insert into inscricao (refAluno,refTurma,nota,frequencia, cancelado, concluida) values(4,3,10,90,1,0);
 
 	create table turma 

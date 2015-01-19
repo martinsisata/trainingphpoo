@@ -53,8 +53,8 @@ try
 	#####################################################
 	//instanciar um critério de seleção
 	$criteria = new TCriteria;
-	$criteria->add(new TFilter('nota',          '>=',    7));
-	$criteria->add(new TFilter('frequencia',    '>=',    75));
+	$criteria->add(new TFilter('nota',          ' >=',    7));
+	$criteria->add(new TFilter('frequencia',    ' >=',    75));
 	$criteria->add(new TFilter('refTurma',      ' =',    1));
 	$criteria->add(new TFilter('cancelado',     ' =',    FALSE));
 

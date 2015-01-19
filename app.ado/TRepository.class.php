@@ -25,7 +25,7 @@ final class TRepository
 	function load(TCriteria $criteria)
 	{
 		//instancia a instrução de SELECT
-		$sql = new TSQlSelect;
+		$sql = new TSqlSelect;
 		$sql->addColumn (' * ');
 		$sql->setEntity($this->class);
 
@@ -102,17 +102,17 @@ final class TRepository
 	function count(TCriteria $criteria)
 	{
 		//Instancia a instrução SELECT
-		$sql = new TSQlSelect;
+		$sql = new TSqlSelect;
 		$sql->addColumn(' count(*) ');
 		$sql->setEntity($this->class);
 
 		//Atribui o critério passado como parâmetro
 		$sql->setCriteria($criteria);
 		//Obtém transação activa
-		if ($sql = TTransaction::get()) 
+		if ($conn = TTransaction::get()) 
 		{
 			//Resgistra mensagem de log
-			TTransaction::log($sql->$getInstruction());
+			TTransaction::log($sql->getInstruction());
 
 			//Executa instrução SELECT
 			$result = $conn->Query($sql->getInstruction());

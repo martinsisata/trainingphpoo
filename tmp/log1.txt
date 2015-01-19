@@ -1,10 +1,10 @@
-2015-01-08 16:58:22 :: ** Inserido Aluuno
-2015-01-08 16:58:22 ::  SELECT max(ID) as ID FROM aluno
-2015-01-08 16:58:22 :: INSERT INTO aluno(nome,endereco,telefone,cidade,id)values('Daline Dall Oglio','Rua da Conceição','(51) 1111-2222','Cruzeiro do SUL',	NULL)
-2015-01-08 16:58:22 ::  SELECT max(ID) as ID FROM aluno
-2015-01-08 16:58:22 :: INSERT INTO aluno(nome,endereco,telefone,cidade,id)values('Daline Dall Oglio','Rua da jardim do Mar','(244) 333-566','Luanda',	NULL)
-2015-01-08 16:58:22 :: **Inserindo Cursos
-2015-01-08 16:58:22 ::  SELECT max(ID) as ID FROM curso
-2015-01-08 16:58:22 :: INSERT INTO curso(descricao,duracao,id)values('Orientação a Objecto com PHP',	NULL,	NULL)
-2015-01-08 16:58:22 ::  SELECT max(ID) as ID FROM curso
-2015-01-08 16:58:22 :: INSERT INTO curso(descricao,duracao,id)values('Desenvolvendo em PHP-GTK',	NULL,	NULL)
+2015-01-16 21:12:43 :: ** Inserido Aluuno
+2015-01-16 21:12:43 ::  SELECT max(ID) as ID FROM aluno
+2015-01-16 21:12:43 :: INSERT INTO aluno(nome,endereco,telefone,cidade,id)values('Daline Dall Oglio','Rua da Conceição','(51) 1111-2222','Cruzeiro do SUL',	NULL)
+2015-01-16 21:12:43 ::  SELECT max(ID) as ID FROM aluno
+2015-01-16 21:12:43 :: INSERT INTO aluno(nome,endereco,telefone,cidade,id)values('Daline Dall Oglio','Rua da jardim do Mar','(244) 333-566','Luanda',	NULL)
+2015-01-16 21:12:43 :: **Inserindo Cursos
+2015-01-16 21:12:43 ::  SELECT max(ID) as ID FROM curso
+2015-01-16 21:12:43 :: INSERT INTO curso(descricao,duracao,id)values('Orientação a Objecto com PHP',	NULL,	NULL)
+2015-01-16 21:12:43 ::  SELECT max(ID) as ID FROM curso
+2015-01-16 21:12:43 :: INSERT INTO curso(descricao,duracao,id)values('Desenvolvendo em PHP-GTK',	NULL,	NULL)
